@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">       
+       <meta name="viewport" content="width = device-width, initial-scale = 1">
+		<title>JavaScript Tetris</title>
+		
+<script>
+var audio = new Audio('retrowave.mp3');
+function play() {
+  audio.play();
+}
+
+function pause() {
+	audio.pause();
+}
+
+audio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+</script>
+<script src="tetris.js"></script> 
+<button class=button onclick="play()">Audio On</button>
+<button class=button onclick="pause()">Audio Off</button>
+	<style>
+	.button {
+	background-color: #f44336; color: black;
+	text-align: center;
+	padding: 15px 32px;	
+	font-size: 16px;
+	border-radius: 8px;
+	}
+	</style>
+       
+		
+</html>
+		
+    </head>
+    <body>
+        <canvas id='my-canvas'></canvas>
+    </body>
+
+
+	
